@@ -6,13 +6,13 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:22:21 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/17 14:28:37 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/03/18 15:43:13 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-
+#include <iomanip>
 class Contact {
 	std::string first_name;
 	std::string last_name;
@@ -31,4 +31,3 @@ class Contact {
 		void		set_phone_number(std::string name);
 		void		set_secrete(std::string name);
 };
-

@@ -1,7 +1,12 @@
 #include "contact.hpp"
 
 class PhoneBook{
-    public:
         Contact account[8];
-        void add();
+    public:
+        int size;
+        void add(int i);
+        void print_index(int i);
+        void search();
+        void print();
 };
+
