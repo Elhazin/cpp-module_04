@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:22:15 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/19 00:27:23 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/03/19 12:38:24 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,5 @@ int main()
 			my_contact.search();
 		else if (str == "exit")
 			exit(0);
-		// else
-		// 	std::cout << "\e[0;31minvalid arguments\e[0m";
-		
-
 	}
 }
