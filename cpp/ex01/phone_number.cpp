@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:28:44 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/19 00:30:32 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/03/19 12:25:25 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void PhoneBook::print()
 	print_colo();
 	while (i < size)
 	{
-		std::cout   << std::setw(10) << i + 1 << std::setw(2) << "|"
+		std::cout   << std::setw(10) << i << std::setw(2) << "|"
 					<< std::setw(10) << account[i].get_first_name() << std::setw(2) << "|"
 					<< std::setw(10) << account[i].get_the_second() << std::setw(2) << "|"
 					<< std::setw(10) << account[i].get_the_nickname() << std::setw(2) << "|\n";
@@ -68,17 +68,37 @@ void PhoneBook::print_index(int i)
 					<< std::setw(10) << account[i].get_the_second() << std::setw(2) << "|"
 					<< std::setw(10) << account[i].get_the_nickname() << std::setw(2) << "|\n";
 }
+int check_is_digit(std::string str)
+{
+	int  i;
+	
+	i = 0;
+	while (str[i])
+	{
+		if (isdigit(str[i]) == 0)
+			return (1);
+		i++;
+	}
+	return (0);
+}
 void PhoneBook::search()
 {
 	int i;
 
 	i = 0;
-		print();
+	std::string numstr;
+	print();
 		std::cout << "please choose an index : ";
-	std::cin >> i;
-	if (i > size)
+	std::cin >> numstr;
+	if (check_is_digit(numstr) == 1)
 	{
-		std::cout << "\e[0;31m the index that you entered is 1\e[0m\n";
+		std::cout << "\e[0;31m the index that you entered is not a digit\e[0m\n";
+		return ;
+	}	
+	i = std::atoi(numstr.c_str());
+	if (i > size || i < 0)
+	{
+		std::cout << "\e[0;31m the index that you entered isout of range of contact\e[0m\n";
 		return ;
 	}
 	print_index(i);
