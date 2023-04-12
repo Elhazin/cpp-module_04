@@ -7,6 +7,6 @@ $(NAME) : $(src)
 	$(CFLAGS) $(src) -o $(NAME)
 clean :
 	rm $(NAME)
-fclean
+fclean : 
 	clean
 re : fclean all 
