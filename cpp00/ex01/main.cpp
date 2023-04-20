@@ -6,12 +6,12 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:22:15 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/25 01:02:52 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/04/19 17:59:58 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phone_number.hpp"
-int main()
+int	 main()
 {
 	std::string	str;
 	PhoneBook	my_contact;
@@ -26,7 +26,7 @@ int main()
 		std::getline(std::cin, str);
 		if (std::cin.eof())
 			exit(0);
-		if (str == "add")
+		if (str == "ADD")
 		{		
 			if (i == 7)
 			i = 0;
@@ -37,9 +37,9 @@ int main()
 				my_contact.size++;
 				i++;
 		}
-		else if (str == "search")
+		else if (str == "SEARCH")
 			my_contact.search();
-		else if (str == "exit")
+		else if (str == "EXIT")
 			exit(0);
 	}
 }

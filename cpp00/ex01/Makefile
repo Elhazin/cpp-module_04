@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = a.out 
 CFLAGS = c++ -Wall -Wextra -Werror -std=c++98
 src = contact.cpp main.cpp phone_number.cpp
 all : $(NAME)

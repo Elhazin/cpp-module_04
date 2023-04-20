@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:28:44 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/25 18:17:11 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:00:23 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,20 +73,23 @@ void PhoneBook::add(int i)
 	account[i].set_phone_number(number);
 	account[i].set_secrete(secrete);
 }
-void print_colo()
+
+void	print_colo()
 {
-	std::cout << "\n" << std::endl;
-	std::cout << std::setw(10) << "\e[1;36mIndex" << std::setw(2) << "|"
-				<< std::setw(10) << "First name" << std::setw(2) << "|"
-				<< std::setw(10) << "Last name" << std::setw(2) << "|"
-				<< std::setw(10) << "nickname" << std::setw(2) << "|\e[1;30m\n";
+	std::cout << "\n\e[1;36m" << std::endl;
+	std::cout << std::setw(10) << "Index" << "|"
+				<< std::setw(10) << "First name" << "|"
+				<< std::setw(10) << "Last name" << "|"
+				<< std::setw(10) << "nickname" << "|";
+	std::cout << "\e[1;30m\n";
 }
-void PhoneBook::print()
+
+void	PhoneBook::print()
 {
-	int i;
-	std::string firstname;
-	std::string secondname;
-	std::string nickname;
+	int			i;
+	std::string	firstname;
+	std::string	secondname;
+	std::string	nickname;
 	i = 0;
 	print_colo();
 	while (i < size)
@@ -112,16 +115,16 @@ void PhoneBook::print()
 			nickname += ".";
 		}
 
-		std::cout   << std::setw(10) << i << std::setw(2) << "|"
-					<< std::setw(10) << firstname << std::setw(2) << "|"
-					<< std::setw(10) << secondname << std::setw(2) << "|"
-					<< std::setw(10) << nickname << std::setw(2) << "|\n";
+		std::cout   << std::setw(10) << i  << "|"
+					<< std::setw(10) << firstname  << "|"
+					<< std::setw(10) << secondname  << "|"
+					<< std::setw(10) << nickname << "|\n";
 		i++;
 	}
 	std::cout << "\n";
 }
 
-void PhoneBook::print_index(int i)
+void	PhoneBook::print_index(int i)
 {
 	std::cout << "\n";
 	std::cout << "Index       : " << i << std::endl;
@@ -130,7 +133,8 @@ void PhoneBook::print_index(int i)
 	std::cout << "Nickname    : " << account[i].get_the_nickname() << std::endl;
 	std::cout << "\n";
 }
-int check_is_digit(std::string str)
+
+int	check_is_digit(std::string str)
 {
 	int  i;
 	
@@ -143,7 +147,8 @@ int check_is_digit(std::string str)
 	}
 	return (0);
 }
-void PhoneBook::search()
+
+void	PhoneBook::search()
 {
 	int i;
 
@@ -157,6 +162,8 @@ void PhoneBook::search()
 	print();
 		std::cout << "please choose an index : ";
 	getline(std::cin, numstr);
+	if (std::cin.eof())
+		exit(0);
 	if (check_is_digit(numstr) == 1)
 	{
 		std::cout << "\e[0;31m the index that you entered is not a digit\e[0m\n";
