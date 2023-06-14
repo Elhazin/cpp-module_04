@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_number.hpp                                   :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 00:36:46 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/05/16 20:11:40 by abouzanb         ###   ########.fr       */
+/*   Created: 2023/06/02 16:09:52 by abouzanb          #+#    #+#             */
+/*   Updated: 2023/06/14 16:48:53 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
 
-class PhoneBook{
-		Contact account[8];
-	public:
-		int size;
-		void add(int i);
-		void print_index(int i);
-		void search();
-		void print();
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
+
+#include <iostream>
+#include "Brain.hpp"
+
+
+class Animal {
+	protected :
+		std::string type;
+		Brain *brain;
+	public :
+	Animal();
+	Animal(Animal &animal);
+	virtual ~Animal();
+	Animal &operator=(Animal &animal);
+	virtual std::string getType() const = 0;
+	virtual void  makeSound() const = 0;
+	Brain* get_brain() const;
+	void set_brain(Brain* brain);
 };
+
+
+#endif

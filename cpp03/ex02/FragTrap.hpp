@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_number.hpp                                   :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 00:36:46 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/05/16 20:11:40 by abouzanb         ###   ########.fr       */
+/*   Created: 2023/06/02 15:45:53 by abouzanb          #+#    #+#             */
+/*   Updated: 2023/06/02 16:01:59 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-class PhoneBook{
-		Contact account[8];
-	public:
-		int size;
-		void add(int i);
-		void print_index(int i);
-		void search();
-		void print();
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+
+class FragTrap : public ClapTrap
+{
+    public:
+        void highFivesGuys(void);
+        FragTrap(std::string nn);
+        FragTrap(FragTrap& copy);
+        FragTrap& operator=(FragTrap& copy);
+        FragTrap();
+        ~FragTrap();
+    
 };
+
+
+
+#endif

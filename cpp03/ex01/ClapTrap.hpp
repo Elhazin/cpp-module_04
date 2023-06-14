@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_number.hpp                                   :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 00:36:46 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/05/16 20:11:40 by abouzanb         ###   ########.fr       */
+/*   Created: 2023/06/01 16:41:43 by abouzanb          #+#    #+#             */
+/*   Updated: 2023/06/02 00:54:54 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
-class PhoneBook{
-		Contact account[8];
+#include <iostream>
+
+class ClapTrap
+{
+	protected:
+		std::string string;
+		int hit;
+		int enegry;
+		int damage;
 	public:
-		int size;
-		void add(int i);
-		void print_index(int i);
-		void search();
-		void print();
+		ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(ClapTrap& newe);
+		ClapTrap& operator=(ClapTrap& newe);
+		~ClapTrap();
+		void attack(const std::string& target);
+		void takeDamage(unsigned int amount);
+		void beRepaired(unsigned int amount);
 };
+
+#endif

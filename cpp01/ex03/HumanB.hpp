@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_number.hpp                                   :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/25 00:36:46 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/05/16 20:11:40 by abouzanb         ###   ########.fr       */
+/*   Created: 2023/03/29 21:44:17 by abouzanb          #+#    #+#             */
+/*   Updated: 2023/05/18 23:43:27 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Weapon.hpp"
 
-class PhoneBook{
-		Contact account[8];
+class HumanB{
+	private:
+		std::string name;
+		Weapon      *weapon;
 	public:
-		int size;
-		void add(int i);
-		void print_index(int i);
-		void search();
-		void print();
+		std::string get_name();	
+		std::string get_weapon();
+		HumanB(std::string str);
+		~HumanB();
+        void attack();
+        void setWeapon(Weapon &set);
 };
+

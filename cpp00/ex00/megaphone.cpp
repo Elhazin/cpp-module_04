@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 14:22:37 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/17 14:23:55 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/05/19 16:34:46 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ int	main(int argc, char *argv[])
 		{
 			i = argv[x][y];
 			if (i >= 97 && i <= 122)
-			{
 				i = i - 32;
-			}
 			std::cout << i ;
 			y++;
 		}
