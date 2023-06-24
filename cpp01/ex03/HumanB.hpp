@@ -6,9 +6,13 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 21:44:17 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/05/18 23:43:27 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/06/16 20:41:15 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HUMANB_HPP
+
+# define HUMANB_HPP
 
 #include "Weapon.hpp"
 
@@ -25,3 +29,5 @@ class HumanB{
         void setWeapon(Weapon &set);
 };
 
+
+#endif

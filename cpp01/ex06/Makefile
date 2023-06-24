@@ -1,17 +1,19 @@
-NAME = sed
 
-SRCS = main.cpp
+NAME = harlFilter
+
+SRC = main.cpp Harl.cpp
 
 FLAGS = c++ -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	@$(FLAGS) $(SRCS) -o $(NAME)
+$(NAME): $(SRC)
+	@$(FLAGS) $(SRC) -o $(NAME)
 
 clean :
 	@rm -rf $(NAME)
 
+
 fclean: clean
 
-rre: fclean all
+re: fclean all

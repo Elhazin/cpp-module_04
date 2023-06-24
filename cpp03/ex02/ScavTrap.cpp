@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string nn)
+ScavTrap::ScavTrap(std::string nn) 
 {
 	std::cout << "The constroucter of ScavClap is called" << std::endl;
 	string	=	nn;
@@ -8,13 +8,9 @@ ScavTrap::ScavTrap(std::string nn)
 	enegry	=	50;
 	hit		=	100;
 }
-ScavTrap::ScavTrap(ScavTrap& copy)
+ScavTrap::ScavTrap(ScavTrap& copy) : ClapTrap(copy)
 {
 	std::cout << "The constroucter of ScavClap is called" << std::endl;
-	string	=	copy.string;
-	hit		=	copy.hit;
-	enegry	=	copy.enegry;
-	damage	=	copy.damage;
 }
 
 ScavTrap& ScavTrap::operator=(ScavTrap& copy)

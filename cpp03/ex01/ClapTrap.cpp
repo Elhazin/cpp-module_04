@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:41:37 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/06/02 02:14:38 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/06/19 04:02:01 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 ClapTrap::ClapTrap()
 {
-	//std::cout << "ClapTrap constructor called" << std::endl;
+	std::cout << "\e[0;32mClapTrap constructor called\e[0m" << std::endl;
 	hit		=	10;
 	enegry	=	10;
 	damage	=	0;
 }
 ClapTrap::ClapTrap(std::string name)
 {
-	//std::cout << "ClapTrap constructor called" << std::endl;
+	std::cout << "\e[0;32mClapTrap parametred constructor called\e[0m" << std::endl;
 	string	=	name;
 	hit		=	10;
 	enegry	=	10;
@@ -29,35 +29,36 @@ ClapTrap::ClapTrap(std::string name)
 }
 ClapTrap::ClapTrap(ClapTrap& newe)
 {
-	hit		= newe.hit;
-	string	= newe.string;
-	enegry	= newe.enegry;
-	damage	= newe.damage;
+	std::cout << "\e[0;32mClapTrap copy constructor called\e[0m" << std::endl;
+	hit		=	newe.hit;
+	string	=	newe.string;
+	enegry	=	newe.enegry;
+	damage	=	newe.damage;
 }
 ClapTrap& ClapTrap::operator=(ClapTrap& newe)
 {
-	//std::cout << "ClapTrap operator= called" << std::endl;
-	hit		= newe.hit;
-	string	= newe.string;
-	enegry	= newe.enegry;
-	damage	= newe.damage;
+	std::cout << "\e[0;32mClapTrap operator= called\e[0m" << std::endl;
+	hit		=	newe.hit;
+	string	=	newe.string;
+	enegry	=	newe.enegry;
+	damage	=	newe.damage;
 	return *this;
 }
 
 ClapTrap::~ClapTrap()
 {
-	//std::cout << "ClapTrap destructor called" << std::endl;
+	std::cout << "\e[0;31mClapTrap destructor called\e[0m" << std::endl;
 }
 void ClapTrap::attack(const std::string& target)
 {
 	if (hit > 0 || enegry > 0)
 	{
-		std::cout <<string << " attack " << target << ", causing " << damage << " points of damage!" << std::endl;
+		std::cout << "ClapTrap : " << string << " attack " << target << ", causing " << damage << " points of damage!" << std::endl;
 		hit--;
 		enegry--;
 	}
-	else
-		std::cout << string << " is dead" << std::endl;
+	else 
+		std::cout << "\e[0;32m"<< string << " is already dead\e[0m" << std::endl;
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {

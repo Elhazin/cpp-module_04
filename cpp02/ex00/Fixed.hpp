@@ -1,11 +1,19 @@
+#ifndef FIXED_HPP
+
+#define FIXED_HPP
+
 #include <iostream>
-
-class fixed {
-    private:
-        static int i;
-        static const i = 8;
+class Fixed {
     public:
-        fixed(const ){
+        Fixed();
+        ~Fixed();
+        Fixed(const Fixed &fixed);
+        Fixed &operator=(const Fixed &fixed);
+        int getRawBits(void) const;
+        void setRawBits(int const raw);
+    private:
+        int fixedpoint;
+        static const int bits = 8;
+};
 
-        }
-}
+#endif

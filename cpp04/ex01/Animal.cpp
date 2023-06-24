@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 15:56:56 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/06/14 16:42:56 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/06/22 21:32:20 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,16 @@ Animal::~Animal()
 Animal::Animal(Animal &animal)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
-	*this = animal;
+	type = animal.getType();
+	
 }
 
 Animal& Animal::operator=(Animal &animal)
 {
 	std::cout << "Animal assignation operator called" << std::endl;
-	return (animal);
+	type = animal.getType();
+	brain = new Brain(*animal.get_brain());
+	return (*this);
 }
 Animal::Animal()
 {

@@ -1,4 +1,4 @@
-@NAME = ex01
+NAME = ex01
 src = Zombie.cpp main.cpp zombieHorde.cpp
 flags = g++ -Wall -Wextra -Werror
 all : $(NAME)

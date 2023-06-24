@@ -14,13 +14,9 @@ FragTrap::FragTrap(std::string nn)
 	hit		=	100;
 }
 
-FragTrap::FragTrap(FragTrap& copy)
+FragTrap::FragTrap(FragTrap& copy) : ClapTrap(copy)
 {
 	std::cout << "The constroucter of FragClap is called" << std::endl;
-	string	=	copy.string;
-	hit		=	copy.hit;
-	enegry	=	copy.enegry;
-	damage	=	copy.damage;
 }
 FragTrap::~FragTrap()
 {

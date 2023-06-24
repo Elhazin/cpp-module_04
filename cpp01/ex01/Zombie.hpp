@@ -6,9 +6,13 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 02:26:58 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/03/26 03:40:14 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/06/16 20:40:40 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+
+# define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
@@ -22,3 +26,5 @@ class Zombie{
 		void  set_name(std::string nom);
 };
 Zombie* zombieHorde( int N, std::string name );
+
+#endif

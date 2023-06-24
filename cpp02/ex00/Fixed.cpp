@@ -1,17 +1,6 @@
 #include "Fixed.hpp"
 
-class Fixed {
-    public:
-        Fixed();
-        ~Fixed();
-        Fixed(const Fixed &fixed);
-        Fixed &operator=(const Fixed &fixed);
-        int getRawBits(void) const;
-        void setRawBits(int const raw);
-    private:
-        int fixedpoint;
-        static const int bits = 8;
-};
+
 
 Fixed::Fixed() {
     std::cout  << "Default constructor called" << std::endl;

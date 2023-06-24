@@ -111,8 +111,10 @@ virtual function allowas the drived class to replace the the implemention of the
 
 
 
-
-
+//change from floating point we transfer that nhumber to binary . e.g this number is 2.554 is  10.10001101110100101111  here to get the exponent we we llok where is the comma "." and w move it until the last 1 bites in this example we will move it an we will culculate how many times 1.010001101110100101111  here we move it with one . then we will take one and we will ad it to bioas whihc is 127 and we will have 128 then we need to get the get the binary of it and we will get the exponent 10000000 . 
+then here the exponent is 10000000 and the mantisa is 010001101110100101111 whihc is 0.27699995040893554688 
+then to get the exact one . we will do this culculation 
+    (-1)^0 * (1 + 0.27699995040893554688) * 2^1
 
 
 
