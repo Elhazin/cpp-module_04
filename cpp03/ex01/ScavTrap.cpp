@@ -44,12 +44,12 @@ void ScavTrap::attack(const std::string& target)
 {
 	if (hit > 0 && enegry > 0)
 	{
-		std::cout << string << " attack " << target << ", causing " << damage << " points of damage!" << std::endl;
+		std::cout << "ScavTrap : " << string << " attack " << target << ", causing " << damage << " points of damage!" << std::endl;
 		hit--;
 		enegry--;
 	}
 	else
-		std::cout <<  string << " is dead, So he can not ATTACK" << std::endl;
+		std::cout << "ScavTrap : "<<  string << " is dead, So he can not ATTACK" << std::endl;
 }
 
 ScavTrap::~ScavTrap()

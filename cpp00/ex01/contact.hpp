@@ -14,13 +14,16 @@
 #include <string>
 #include <iomanip>
 class Contact {
+	// this is the class that will be used to create the contact
 	private:
 		std::string first_name;
 		std::string last_name;
 		std::string nickname;
 		std::string phone_number;
 		std::string darkest_secrete;
+		// those varibales are the attributes of the class
 	public:
+
 		std::string	get_first_name();
 		std::string	get_the_second();
 		std::string	get_the_nickname();
@@ -31,7 +34,15 @@ class Contact {
 		void		set_nickname_name(std::string name);
 		void		set_phone_number(std::string name);
 		void		set_secrete(std::string name);
+		// those functions are the methods of the class
+		// they are called member functions
+		// they are used to access the attributes of the class
+		// they are used to modify the attributes of the class
 };
+
+// Color codes
+
+// Regular text
 
 #define BLK "\e[0;30m"
 #define RED "\e[0;31m"

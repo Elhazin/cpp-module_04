@@ -15,7 +15,6 @@ class Dog : public Animal
 		~Dog();
 		Dog& operator=(Dog& dog);
 		void makeSound() const;
-		std::string getType() const;
 		Brain *getBrain() const;
 };
 

@@ -28,9 +28,6 @@ const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
 	return (b);
 }
 
-
-
-
 bool Fixed::operator>(const Fixed &f) const
 {
 	return (this->getRawBits() > f.getRawBits());
@@ -115,11 +112,6 @@ Fixed Fixed::operator-(const Fixed &f) const
 	tmp.setRawBits(this->getRawBits() - f.getRawBits());
 	return (tmp);
 }
-
-
-
-
-
 
 std::ostream &operator<<(std::ostream &out, Fixed const &value)
 {

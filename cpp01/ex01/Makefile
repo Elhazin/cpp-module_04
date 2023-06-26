@@ -6,6 +6,6 @@ $(NAME) : $(src)
 	@$(flags) $(src) -o $(NAME)
 clean :
 	@rm -rf $(NAME)
-fclean :
-	clean
+fclean : clean
+
 re : fclean all

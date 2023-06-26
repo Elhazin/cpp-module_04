@@ -4,9 +4,9 @@ src = megaphone.cpp
 all : $(NAME)
 
 $(NAME) : $(src)
-	$(CFLAGS) $(src) -o $(NAME)
+	@$(CFLAGS) $(src) -o $(NAME)
 clean :
-	rm $(NAME)
+	@rm -f $(NAME)
 fclean : 
 	clean
 re : fclean all 

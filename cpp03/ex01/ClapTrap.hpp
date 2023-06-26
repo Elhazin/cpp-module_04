@@ -18,8 +18,8 @@
 class ClapTrap
 {
 	protected:
-		std::string string;
-		int hit;
+		std::string string; // this is the name of the ClapTrap
+		int hit; // this is the hit point of the ClapTrap
 		int enegry;
 		int damage;
 	public:
@@ -28,9 +28,9 @@ class ClapTrap
 		ClapTrap(ClapTrap& newe);
 		ClapTrap& operator=(ClapTrap& newe);
 		~ClapTrap();
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		void attack(const std::string& target); // this is the function that will be used to attack
+		void takeDamage(unsigned int amount); // this is the function that will be used to take damage
+		void beRepaired(unsigned int amount); // this is the function that will be used to be repaired
 };
 
 #endif

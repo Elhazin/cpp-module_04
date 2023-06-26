@@ -12,7 +12,6 @@ Cat::Cat(Cat& cat)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	this->brain = new Brain(*cat.brain);
-	type = cat.getType();
 }
 
 Cat::~Cat()
@@ -21,6 +20,12 @@ Cat::~Cat()
 	std::cout << "Cat destructor called" << std::endl;
 }
 
+Brain* Cat::getBrain() const
+{
+	return brain;
+}
+
+
 Cat& Cat::operator=(Cat& cat)
 {
 	std::cout << "Cat assignation operator called" << std::endl;
@@ -28,7 +33,6 @@ Cat& Cat::operator=(Cat& cat)
 	{
 		delete brain;
 		this->brain = new Brain(*cat.brain);
-		type = cat.getType();
 	}
 	return *this;
 }
@@ -36,9 +40,5 @@ Cat& Cat::operator=(Cat& cat)
 void Cat::makeSound() const
 {
 	std::cout << "Mewoow Mewoow" << std::endl;
-}
-std::string Cat::getType() const
-{
-	return type;
 }
 

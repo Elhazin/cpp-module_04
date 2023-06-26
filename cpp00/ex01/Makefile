@@ -4,9 +4,9 @@ src = contact.cpp main.cpp phone_number.cpp
 all : $(NAME)
 
 $(NAME) : $(src)
-	$(CFLAGS) $(src) -o $(NAME) -lreadline
+	@$(CFLAGS) $(src) -o $(NAME) -lreadline
 clean :
-	rm $(NAME)
-fclean : 
-	clean
+	@rm -f $(NAME)
+fclean : clean
+	
 re : fclean all 

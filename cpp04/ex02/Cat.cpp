@@ -41,8 +41,4 @@ void Cat::makeSound() const
 {
 	std::cout << "Mewoow Mewoow" << std::endl;
 }
-std::string Cat::getType() const
-{
-	return type;
-}
 

@@ -18,28 +18,18 @@
 
 
 class Animal {
-	protected :
+	protected : // this is the protected part of the class it can be accessed by the class and its children
 		std::string type;
 	public :
 	Animal();
 	Animal(Animal &animal);
-	virtual ~Animal();
+	virtual ~Animal(); // this is the destructor of the class it is virtual because it will be used by the children an if it is not virtual the compiler will not call the destructor of the children
 	Animal &operator=(Animal &animal);
 
-	virtual std::string getType() const;
-	virtual void  makeSound() const;
+	std::string getType() const;
+	virtual void  makeSound() const; // this is the function that will be used to make sound it is virtual because it will be used by the children an if it is not virtual the compiler will not call the function of the children
 };
 
-class WrongAnimal{
-	protected :
-		std::string type;
-	public :
-	WrongAnimal();
-	WrongAnimal(WrongAnimal &animal);
-	~WrongAnimal();
-	WrongAnimal &operator=(WrongAnimal &animal);
-	std::string getType();
-	void  makeSound();
-};
+
 
 #endif

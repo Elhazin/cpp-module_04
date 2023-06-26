@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:41:37 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/06/07 20:04:01 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/06/21 23:18:59 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "ClapTrap constructor called" << std::endl;
+
+	std::cout << "ClapTrap defalut constructor called" << std::endl;
 	hit		=	10;
 	enegry	=	10;
 	damage	=	0;
+
 }
 ClapTrap::ClapTrap(std::string name)
 {
@@ -51,7 +53,7 @@ ClapTrap::~ClapTrap()
 }
 void ClapTrap::attack(const std::string& target)
 {
-	if (hit > 0 || enegry > 0)
+	if (hit > 0 && enegry > 0)
 	{
 		std::cout <<string << " attack " << target << ", causing " << damage << " points of damage!" << std::endl;
 		hit--;
@@ -62,7 +64,7 @@ void ClapTrap::attack(const std::string& target)
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if (hit > 0 || enegry > 0)
+	if (hit > 0 && enegry > 0)
 	{
 		std::cout << string << " got " << amount << " point of damage" << std::endl;
 		hit -= amount;
@@ -74,7 +76,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (hit < 0 || enegry <= 0)
+	if (hit < 0 || enegry < 0)
 		 std::cout << string << " is dead and cannot be repaired" << std::endl;
 	else {
 		std::cout <<string << " got " << amount << " of hit point" << std::endl;

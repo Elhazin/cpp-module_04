@@ -24,13 +24,13 @@
 
 class Zombie {
 	private :
-		std::string name;
+		std::string name; // this is the name of the zombie
 	public :
-		Zombie(std::string nom);
-		~Zombie();
-		void	announce(void);
+		Zombie(std::string nom); // this is the constructor of the class
+		~Zombie(); // this is the destructor of the class 
+		void	announce(void); // this is the function that will be used to announce the zombie
 };
-Zombie* newZombie( std::string name );
-void	randomChump( std::string name );
+Zombie* newZombie( std::string name ); // this is the function that will be used to create a new zombie
+void	randomChump( std::string name ); // this is the function that will be used to create a random zombie
 
 #endif

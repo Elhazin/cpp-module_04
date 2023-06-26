@@ -20,16 +20,14 @@ Brain::Brain(Brain &brain)
 	while (i < 100)
 	{
 		ideas[i] = brain.ideas[i];
-			i++;
+		i++;
 	}
 }
 
 Brain& Brain::operator=(Brain &brain)
 {
 	std::cout << "Brain assignation operator called" << std::endl;
-	int	i;
-
-	delete this;
+	int i;
 	i = 0;
 	while (i < 100)
 	{
@@ -43,7 +41,7 @@ void Brain::set_ideas(std::string idea, int index)
 {
 	if (index >= 0 && index < 100)
 		ideas[index] = idea;
-	else
+	else 
 		std::cout << "Index out of range" << std::endl;
 }
 

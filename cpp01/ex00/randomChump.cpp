@@ -14,6 +14,6 @@
 
 void randomChump( std::string name )
 {
-	Zombie zomnbie(name);
-	zomnbie.announce();
-}
+	Zombie zomnbie(name); // we create a zombie
+	zomnbie.announce(); // we announce the zombie
+} // the zombie will be destroyed here

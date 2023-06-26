@@ -22,7 +22,7 @@ std::string HumanA::get_weapon()
 	return (weapon.getType());
 }
 
-HumanA::HumanA(std::string str, Weapon& weap) : weapon(weap)
+HumanA::HumanA(std::string str, Weapon& weap) : weapon(weap) // this is the constructor of the class HumanA 
 {
 	name  = str;
 }

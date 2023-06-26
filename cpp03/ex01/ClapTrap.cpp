@@ -6,7 +6,7 @@
 /*   By: abouzanb <abouzanb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 16:41:37 by abouzanb          #+#    #+#             */
-/*   Updated: 2023/06/19 04:02:01 by abouzanb         ###   ########.fr       */
+/*   Updated: 2023/06/21 23:41:44 by abouzanb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,18 +51,18 @@ ClapTrap::~ClapTrap()
 }
 void ClapTrap::attack(const std::string& target)
 {
-	if (hit > 0 || enegry > 0)
+	if (hit > 0 && enegry > 0)
 	{
 		std::cout << "ClapTrap : " << string << " attack " << target << ", causing " << damage << " points of damage!" << std::endl;
 		hit--;
 		enegry--;
 	}
 	else 
-		std::cout << "\e[0;32m"<< string << " is already dead\e[0m" << std::endl;
+		std::cout << "\e[0;32m"<< string << " is already dead and he can not attack\e[0m" << std::endl;
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if (hit > 0 || enegry > 0)
+	if (hit > 0 && enegry > 0)
 	{
 		std::cout << string << " got " << amount << " point of damage" << std::endl;
 		hit -= amount;

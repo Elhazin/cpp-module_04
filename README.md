@@ -1,34 +1,46 @@
 # cpp
 cpp00
 
-Class . class in cpp is defins a data type, you think of it like a struct in c , whose its variabls and function (in cpp you can have function inside a class)  are private ;
-what is type :
-    type consists of both set of states and set of operatinos.
-what is an object :
-- objecti a fundamental concept in OOP, it is an instance of class , and it is a region of storage , that hold data which is the attrbutes(variables)  and behavior which are methods (fucntions) it is like huamns , humane have his organs (variables) and he also have some behaivor that he make them in some spesific time 
-- An object is a fundamental concept in object-oriented programming (OOP) where it serves as an instance of a class. It can be seen as a region of storage that holds data, which are the attributes (variables), as well as behavior, which is defined by methods (functions). Objects encapsulate both data and functionality, allowing for modular and reusable code.
+<h1>what is class</h1>
 
-what is namespace :
-    namespace is a feature that help to group code elements in a realted scope, i order to avoid naming conflict ; let us take an example when this naming conflict can occcour , like if iam working on a project that would work on countries natioanlly and internaional , so i need two class, for example i will need the class of morocco internaional and natioanl and i can not do something like this 
-    class morocco {
-        // Class definition
-    }
-    class morocco {
-        // Class definition
-    }
-    this will show me an error 
-    and one of the ways to handle this is using namespaceand i can do like this 
-    namespace National{
-        class morocco{
-            // Class definition
-        }
-    }
-    namespace internaional {
-        class morocco {
-            // Class definition
-        }
-    }
-    here if i want to access the class of morocco nationaly i will do something like Natioanl::morocco 
+<h2>class</h2>
+< p > class in cpp is defins a data type, you think of it like a struct in c , whose its variabls and function (in cpp you can have function inside a class)  are private ; </p>
+<h2>what is type</h2>
+< p > type consists of both set of states and set of operatinos. </p>
+<h2>what is an object</h2>
+
+<p>An object is a fundamental concept in object-oriented programming (OOP) where it serves as an instance of a class. It can be seen as a region of storage that holds data, which are the attributes (variables), as well as behavior, which is defined by methods (functions). Objects encapsulate both data and functionality, allowing for modular and reusable code.</p>
+
+
+<h2>what is namespace</h2>
+< p > namespace is a feature that help to group code elements in a realted scope, i order to avoid naming conflict ; let us take an example when this naming conflict can occcour , like if iam working on a project that would work on countries natioanlly and internaional , so i need two class, for example i will need the class of morocco internaional and natioanl and i can not do something like this </p>
+<p> class morocco { </p>
+<p> // Class definition </p>
+<p> } </p>
+
+<p> class morocco { </p>
+<p> // Class definition </p>
+<p> } </p>
+
+<p> this will show me an error </p>
+<p> and one of the ways to handle this is using namespaceand i can do like this </p>
+<p> namespace National{ </p>
+<p> class morocco{ </p>
+<p> // Class definition </p>
+<p> } </p>
+<p> } </p>
+
+<p> namespace internaional { </p>
+<p> class morocco { </p>
+
+<p> // Class definition </p>
+<p> } </p>
+<p> } </p>
+
+<p> so now if i want to access the class of morocco nationaly i will do something like Natioanl::morocco </p>
+
+<p>    here if i want to access the class of morocco nationaly i will do something like Natioanl::morocco </p>
+
 - NAMESPCE
     A namespace is a feature in C++ that allows you to group related code elements within a specific scope to avoid naming conflicts. Let's consider an example where naming conflicts can occur. Imagine working on a project that involves both national and international aspects of countries. You might need separate classes to represent these contexts, such as "Morocco National" and "Morocco International." However, directly defining two classes with the same name would result in an error.
 

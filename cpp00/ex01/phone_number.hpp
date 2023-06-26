@@ -13,11 +13,13 @@
 #include "contact.hpp"
 
 class PhoneBook{
+	//this is the class that will be used to create the phonebook
 		Contact account[8];
 	public:
-		int size;
-		void add(int i);
-		void print_index(int i);
-		void search();
-		void print();
+		int size; // this is the size of the phonebook
+		void add(int i); // this is the function that will be used to add a contact
+		void print_index(int i); // this is the function that will be used to print a contact
+		void search(); // this is the function that will be used to search a contact
+		void print(); // this is the function that will be used to print the phonebook
+		//thos function are called member functions
 };

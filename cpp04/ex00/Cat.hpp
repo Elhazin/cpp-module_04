@@ -3,26 +3,14 @@
 
 #include "Animal.hpp"
 
-class Cat : public Animal
+class Cat : public Animal // thsi class will inherit from Animal class
 {
     public:
         Cat();
         Cat(Cat& cat);
-        ~Cat();
+        ~Cat(); 
         Cat& operator=(Cat& cat);
-        void makeSound() const;
-        std::string getType() const;
+        void makeSound() const;  // this is the function that will be used to make sound and it will be overriden to print the right message
 };
 
-class WrongCat : public WrongAnimal
-{
-    public:
-        WrongCat();
-        WrongCat(WrongCat& cat);
-        ~WrongCat();
-        WrongCat& operator=(WrongCat& cat);
-        void makeSound() const;
-        std::string getType() const;
-};
-
-#endif
+#endif      

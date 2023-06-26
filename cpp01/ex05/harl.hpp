@@ -9,12 +9,12 @@
 
 class Harl{
 	private :
-		void debug(void);
-		void info(void);
-		void warning(void);
-		void error(void);
+		void debug(void); // this is the function that will be used to print the debug message
+		void info(void); 	// this is the function that will be used to print the info message
+		void warning(void); // this is the function that will be used to print the warning message
+		void error(void); // this is the function that will be used to print the error message
 	public:
-		void complain(std::string level);
+		void complain(std::string level); // this is the function that will be used to print the message
 
 };
 

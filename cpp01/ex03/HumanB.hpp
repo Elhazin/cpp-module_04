@@ -18,16 +18,15 @@
 
 class HumanB{
 	private:
-		std::string name;
-		Weapon      *weapon;
+		std::string name; // this is the name of the human
+		Weapon      *weapon; // this is the weapon of the human
 	public:
-		std::string get_name();	
-		std::string get_weapon();
-		HumanB(std::string str);
+		std::string get_name();	 	
+		std::string get_weapon(); 
+		HumanB(std::string str); 
 		~HumanB();
         void attack();
-        void setWeapon(Weapon &set);
+        void setWeapon(Weapon &set); // this is the function that will be used to set the weapon of the human 
 };
 
-
-#endif
+ #endif

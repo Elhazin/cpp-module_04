@@ -28,17 +28,16 @@ Dog& Dog::operator=(Dog& dog)
 		delete brain;
 		this->brain = new Brain(*dog.brain);
 	}
-	
 	return *this;
+}
+
+Brain* Dog::getBrain() const
+{
+	return brain;
 }
 
 void Dog::makeSound() const
 {
 	std::cout << "How How" << std::endl;
-}
-
-std::string Dog::getType() const
-{
-   return type;
 }
 

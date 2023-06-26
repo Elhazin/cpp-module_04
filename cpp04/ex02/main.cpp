@@ -35,7 +35,6 @@ int main()
 		std::cout << "\e[1;36m-------- More tests ----------\e[0m" << std::endl;
 		Dog dog;
 		Cat cat;
-		Animal *animal = new Animal();
 		dog.getBrain()->set_ideas("I am a dog", 0);
 		cat.getBrain()->set_ideas("I am a cat", 0);
 		Dog dog2 = dog;
@@ -43,15 +42,9 @@ int main()
 		dog2.getBrain()->set_ideas("I am a dog2", 0);
 		functiontest(dog);
 		functiontest(dog2);
-		functiontest(*animal);
 		std::cout << "=============================\e[1;36m" << std::endl;
 	}
-	{
-		std::cout << "\e[1;36m-------- Deep copy ----------\e[0m" << std::endl;
-		Dog dog;
-		{
-			Dog dog2 = dog;
-		}
-		 std::cout << "=============================\e[1;36m" << std::endl;
-	}
+	//{
+	//	Animal *animal = new Animal();
+	//}
 }

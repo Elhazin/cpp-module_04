@@ -19,10 +19,10 @@ Zombie::~Zombie()
 
 Zombie::Zombie(std::string nom)
 {
-	name = nom;
+	name = nom; // we assign the name of the zombie
 }
 void Zombie::announce(void)
 {
-	std::cout << name ;
-	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << name ;// we print the name of the zombie
+	std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl; 
 }

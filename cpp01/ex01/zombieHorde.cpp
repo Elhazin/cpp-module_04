@@ -17,11 +17,11 @@ Zombie*	zombieHorde( int N, std::string name )
 	int	i;
 
 	i = 0;
-	Zombie	*zombie = new Zombie[N];
-	while(i < N)
-	{
-		zombie[i].set_name(name);
-		i++;
+	Zombie	*zombie = new Zombie[N]; // I create an array of zombies
+	while(i < N) // I set the name of each zombie
+	{ 
+		zombie[i].set_name(name); // I set the name of the zombie
+		i++; 
 	}
-	return (zombie);
-}
+	return (zombie); // I return the array of zombies
+} 

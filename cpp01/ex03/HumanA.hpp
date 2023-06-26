@@ -18,14 +18,14 @@
 
 class HumanA{
 	private:
-		std::string name;
-		Weapon& weapon;
+		std::string name; // this is the name of the human
+		Weapon& weapon; // this is the weapon of the human
 	public:
-		std::string get_name();	
-		std::string get_weapon();
-		HumanA(std::string str, Weapon& weapon);
-		~HumanA();
-        void attack();
+		std::string get_name();	 // this is the function that will be used to get the name of the human 
+		std::string get_weapon(); // this is the function that will be used to get the weapon of the human
+		HumanA(std::string str, Weapon& weapon); // this is the constructor of the class
+		~HumanA(); // this is the destructor of the class
+        void attack(); // this is the function that will be used to attack
 };
 
 

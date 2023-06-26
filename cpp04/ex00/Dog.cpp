@@ -28,7 +28,3 @@ void Dog::makeSound() const
     std::cout << "How How" << std::endl;
 }
 
-std::string Dog::getType() const
-{
-   return type;
-}

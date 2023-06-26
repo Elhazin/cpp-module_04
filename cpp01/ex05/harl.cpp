@@ -20,17 +20,18 @@ void Harl::error(void)
 	std::cout << "I told you that this is an error\n";
 }
 
-void Harl::complain(std::string level)
+void Harl::complain(std::string level) 
 {
-	void (Harl::*fun[4])(void) = {&Harl::error, &Harl::debug, &Harl::info , &Harl::warning};
-	const char* index[4] = {"ERROR", "DEBUG","INFO",  "WARNING"};
-	int i;
+	void (Harl::*fun[4])(void) = { &Harl::debug, &Harl::info , &Harl::warning, &Harl::error}; // this is an array of pointers to functions
+	const char* index[4] = {"DEBUG", "INFO","WARNING",  "ERROR"}; // this is an array of strings
+	int i; 
 	i = 0;
 	while (i < 4)
 	{
-		if (level == index[i])
-			(this->*fun[i])();
-		i++;
+		if (level == index[i]) // if the level is equal to the string at the index i 
+			(this->*fun[i])(); // we call the function at the index i
+		i++; 
 	}
 
-}
+}  
+

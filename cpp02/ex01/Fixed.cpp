@@ -1,6 +1,5 @@
 #include "Fixed.hpp"
 
-
 std::ostream &operator<<(std::ostream &out, Fixed const &value)
 {
 	out << value.toFloat();

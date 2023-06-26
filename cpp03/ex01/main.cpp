@@ -4,7 +4,6 @@ int main()
 {
     {
         std::cout << "---------------------" << std::endl;
-        std::string f = "llll";
         ScavTrap enemy("Enemy");
         ScavTrap player("Player");
         ScavTrap copy(player);
@@ -21,19 +20,25 @@ int main()
     }
     {
         std::cout << "---------------------" << std::endl;
+        ClapTrap player1("Player");
         ScavTrap enemy("Enemy");
-        ScavTrap player("Player");
-        ScavTrap copy(player);
-        copy.attack("Enemy");
-        enemy.takeDamage(20);
-        enemy.beRepaired(20);
+        ClapTrap player1friend = player1;
+        ScavTrap enemyfriend;
+        std::cout << "---------------------" << std::endl;
         enemy.attack("Player");
-        enemy.guardGate();
-        player.attack("Enemy");
-        enemy.takeDamage(20);
-        enemy.beRepaired(20);
-        enemy.attack("Player");
-        enemy.guardGate();
-        enemy.attack("Player");
+        player1.takeDamage(20);
+        player1.attack("Enemy");
+        enemy.takeDamage(0);
+        enemyfriend = enemy;
+        enemyfriend.attack("Player");
+        player1.takeDamage(20);
+        player1.attack("Enemy");
+        player1friend.attack("Enemy");
+        enemy.takeDamage(0);
+        enemyfriend.attack("player1friend");
+        player1friend.takeDamage(20);
+        player1friend.attack("Enemy");
+        std::cout << "---------------------" << std::endl;
     }
-}
+
+} 
