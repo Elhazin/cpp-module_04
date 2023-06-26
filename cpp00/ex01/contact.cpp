@@ -12,7 +12,7 @@
 
 #include "contact.hpp"
 
-std::string	Contact::get_first_name() /
+std::string	Contact::get_first_name() 
 {
 	return (first_name);
 }
