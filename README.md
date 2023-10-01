@@ -104,7 +104,7 @@ Object(const Object& existing) {
     // Your implementation
 }
 ```
-* very important note you will have to use refrenese it it is important <a href="https://www.linkedin.com/pulse/why-copy-constructor-must-collect-arguments-reference-patil/" target="_blank">Check this /a>to get the answer
+* very important note you will have to use refrenese it it is important <a href="https://www.linkedin.com/pulse/why-copy-constructor-must-collect-arguments-reference-patil/" target="_blank">Check this </a>to get the answer
 
 
 
